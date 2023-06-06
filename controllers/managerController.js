@@ -1,4 +1,3 @@
-// const Project = require("../models/Project");
 const Task = require("../models/Task");
 
 // Create a new task in a project

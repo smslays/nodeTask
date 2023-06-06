@@ -1,5 +1,4 @@
-
-const User = require('../models/User');
+const User = require("../models/User");
 
 // Create a new Manager account
 exports.createManager = async (req, res) => {
@@ -9,12 +8,12 @@ exports.createManager = async (req, res) => {
       name,
       email,
       password,
-      role: 'manager',
+      role: "manager",
     });
     await manager.save();
-    res.status(201).json({ message: 'Manager account created successfully' });
+    res.status(201).json({ message: "Manager account created successfully" });
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
@@ -26,11 +25,11 @@ exports.createDeveloper = async (req, res) => {
       name,
       email,
       password,
-      role: 'developer',
+      role: "developer",
     });
     await developer.save();
-    res.status(201).json({ message: 'Developer account created successfully' });
+    res.status(201).json({ message: "Developer account created successfully" });
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
